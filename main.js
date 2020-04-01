@@ -30,8 +30,7 @@ function createArray(start, end, step) {
                values.push(i);
           }  
      }
-     const result = `The generated array is ${values}`;
-     return result;   
+     return `The generated array is ${values}`;   
 }
 
 const outputStr = numberValidate();
