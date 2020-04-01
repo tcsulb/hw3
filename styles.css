@@ -1,0 +1,6 @@
+div#output {
+     border-style: solid;
+     border-color: gray;
+     border-left: 0.5px;
+     border-right: 0.5px;
+}

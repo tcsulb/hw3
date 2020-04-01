@@ -1,13 +1,14 @@
+const start = Number(prompt('Enter the start number: '));
+const end = Number(prompt('Enter the end number: '));
+const step = Number(prompt('Enter the step value: '));
 
-function numberValidate() {
-     const start = Number(prompt('Enter the start number: '));
-     const end = Number(prompt('Enter the end number: '));
-     const step = Number(prompt('Enter the step value: '));
-     if (start === NaN || end === NaN || step === NaN || step === 0) {
-          result = createArray(start, end, step);
+function numberValidate(start, end, step) {
+     if (isNaN(start) || isNaN(end) || isNaN(step) || step === 0) {
+          result = "Invalid integer input, please reload and try again.";
      } 
      else {
-          result = "Invalid integer input, please reload and try again.";
+          result = `The generated array is ${createArray(start, end, step)}
+                    The ${sumArray(start,end,step)}`;
      }
      return result
 }    
@@ -24,7 +25,15 @@ function createArray(start, end, step) {
                values.push(i);
           }  
      }
-     return `The generated array is ${values}`;   
+     return values;   
+}
+
+function sumArray(start, end, step) {
+     let values = createArray(start, end, step);
+     for (let i = 0; i <= length.values; i++) {
+          result += values[i];
+     }
+     return result;
 }
 
 const outputStr = numberValidate();
