@@ -1,22 +1,16 @@
 
 function numberValidate() {
      const start = Number(prompt('Enter the start number: '));
-     if (start != NaN) {
-          const end = Number(prompt('Enter the end number: '));
-          if (end != NaN) {
-               const step = Number(prompt('Enter the step value: '));
-               if (step != NaN && step != 0) {
-                    const result = createArray(start, end, step);
-                     // 
-                    return result;
-               }
-          }
+     const end = Number(prompt('Enter the end number: '));
+     const step = Number(prompt('Enter the step value: '));
+     if (start === NaN || end === NaN || step === NaN || step === 0) {
+          result = createArray(start, end, step);
      } 
      else {
-          const result = "Invalid integer input, please reload and try again.";
-          return result;
-     } 
-}
+          result = "Invalid integer input, please reload and try again.";
+     }
+     return result
+}    
 
 function createArray(start, end, step) {
      values = [];
